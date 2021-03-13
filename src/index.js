@@ -1,19 +1,25 @@
-// const AwsS3 = require('@uppy/aws-s3')
-const Uppy = require('@uppy/core')
-const Dashboard = require('@uppy/dashboard')
-require('@uppy/core/dist/style.css')
-require('@uppy/dashboard/dist/style.css')
+const uppy = Uppy.Core({ autoProceed: false });
+uppy.use(Uppy.Dashboard, {
+  target: "#drag-drop-area",
+  inline: true,
+  height: 450,
+});
 
-const uppy = new Uppy()
-    .use(Dashboard, {
-        trigger: '#select-files'
-    })
-    // .use(AwsS3, {
-    //     limit: 2,
-    //     timeout: 1000 * 60,
-    //     companionUrl: 'https://uppy-companion.myapp.com/'
-    // })
+uppy.use(Uppy.Tus, { endpoint: "https://master.tus.io/files/" });
+uppy.on("file-added", (file) => {
+  // Do something
+  var reader = new FileReader();
+  reader.readAsDataURL(file.data);
+  reader.onloadend = function () {
+    var base64data = reader.result;
+    console.log(base64data);
+  };
+});
 
-uppy.on('complete', (result) => {
-    console.log('Upload complete! We’ve uploaded these files:', result.successful)
-})
+uppy.on("upload", (data) => {
+  // Do something
+});
+
+uppy.on("complete", (result) => {
+  // Do something
+});

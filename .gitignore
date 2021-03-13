@@ -1,1 +1,5 @@
-# ignore
+node_modules/
+.temp/
+*.zip
+docs/
+.DS_Store

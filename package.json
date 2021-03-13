@@ -24,7 +24,7 @@
     "access": "public"
   },
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "npx webpack --config webpack.config.js",
     "build": "NODE_ENV=production npx webpack --config webpack.config.js",
     "dev": "npx webpack --config webpack.config.js --watch",
     "docs": "node ./node_modules/@cocreate/docs/src/index.js"
@@ -56,6 +56,9 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.13.10",
     "@cocreate/docs": "^1.0.3",
+    "update": "^0.7.4",
+    "uppy": "^1.26.1"
   }
 }
