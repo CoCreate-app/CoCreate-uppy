@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.0...v1.0.1) (2021-03-29)
+
+
+### Bug Fixes
+
+* Package Paths ([941f839](https://github.com/CoCreate-app/CoCreate-uppy/commit/941f83964347e3ddca66300a936f1e381352b5af))
+
 # 1.0.0 (2021-02-14)
 
 
