@@ -1,6 +1,8 @@
-const path = require("path");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-let isProduction = process.env.NODE_ENV === "production";
+const path = require("path")
+const TerserPlugin = require("terser-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+let isProduction = process.env.NODE_ENV === "production"
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 
 module.exports = {
   entry: {
@@ -13,7 +15,15 @@ module.exports = {
     libraryExport: "default",
     library: ["CoCreate", "uppy"],
     globalObject: "this",
+    // publicPath: 'https://server.cocreate.app/CoCreateJS/dist/'
   },
+
+  plugins: [
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
+  ],
   // Default mode for Webpack is production.
   // Depending on mode Webpack will apply different things
   // on final bundle. For now we don't need production's JavaScript
@@ -22,22 +32,21 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /.js$/,
         exclude: /(node_modules)/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
-            plugins: [
-              "@babel/plugin-transform-runtime",
-              "@babel/plugin-transform-regenerator",
-            ],
+            plugins: ["@babel/plugin-transform-modules-commonjs"],
           },
         },
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /.css$/i,
+        use: [
+          { loader: "style-loader", options: { injectType: "linkTag" } },
+          "file-loader",
+        ],
       },
     ],
   },
@@ -45,15 +54,32 @@ module.exports = {
   // add source map
   ...(isProduction ? {} : { devtool: "eval-source-map" }),
 
-  // add uglifyJs
   optimization: {
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          // get options: https://github.com/mishoo/UglifyJS
-          drop_console: isProduction,
+      new TerserPlugin({
+        extractComments: true,
+        // cache: true,
+        parallel: true,
+        // sourceMap: true, // Must be set to true if using source-maps in production
+        terserOptions: {
+          // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
+          // extractComments: 'all',
+          compress: {
+            drop_console: true,
+          },
         },
       }),
     ],
+    splitChunks: {
+      chunks: "all",
+      minSize: 200,
+      // maxSize: 99999,
+      //minChunks: 1,
+
+      cacheGroups: {
+        defaultVendors: false,
+      },
+    },
   },
-};
+}

@@ -20,9 +20,7 @@
     "html5-framework",
     "javascript-framework"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "publishConfig": { "access": "public" },
   "scripts": {
     "start": "npx webpack --config webpack.config.js",
     "build": "SET NODE_ENV=production npx webpack --config webpack.config.js",
@@ -35,9 +33,7 @@
   },
   "author": "CoCreate LLC",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-uppy/issues"
-  },
+  "bugs": { "url": "https://github.com/CoCreate-app/CoCreate-uppy/issues" },
   "homepage": "https://cocreate.app/docs/uppy",
   "funding": {
     "type": "GitHub Sponsors ❤",
@@ -46,18 +42,20 @@
   "main": "./src/index.js",
   "devDependencies": {
     "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.13.10",
+    "@babel/core": "^7.9.6",
     "@babel/plugin-transform-object-assign": "^7.2.0",
-    "@babel/preset-env": "^7.13.10",
-    "babel-loader": "^8.2.2",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.1.2",
     "html-webpack-plugin": "^4.5.0",
     "style-loader": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^5.25.0",
+    "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0",
-    "webpack-log": "^3.0.1"
+    "webpack-log": "^3.0.1",
+    "file-loader": "^6.2.0",
+    "terser-webpack-plugin": "^5.1.1"
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.13.10",
