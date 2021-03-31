@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.1...v1.0.2) (2021-03-31)
+
+
+### Bug Fixes
+
+* remove yarn.lock and package-lock.json ([2551945](https://github.com/CoCreate-app/CoCreate-uppy/commit/2551945a109e7ac72808a6c2fedc5c1196b7636f))
+
 ## [1.0.1](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.0...v1.0.1) (2021-03-29)
 
 
