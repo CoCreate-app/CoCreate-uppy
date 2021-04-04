@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.2...v1.0.3) (2021-04-04)
+
+
+### Bug Fixes
+
+* update socket to socket-lient and crud to crud client" ([b5b1e5c](https://github.com/CoCreate-app/CoCreate-uppy/commit/b5b1e5c7448261841c2310a3d321cb10fd22e26c))
+
 ## [1.0.2](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.1...v1.0.2) (2021-03-31)
 
 
