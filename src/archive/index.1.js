@@ -20,7 +20,7 @@ require("@uppy/dashboard/dist/style.css");
 const uppy = new Uppy()
   .use(Dashboard, {
     inline: true,
-    target: "#drag-drop-area",
+    trigger: "#drag-drop-area",
     replaceTargetContent: true,
     showProgressDetails: true,
     note: 'up to 15 MB',
@@ -44,66 +44,55 @@ const uppy = new Uppy()
   .use(Facebook, { target: Dashboard, companionUrl: 'https://companion.uppy.io' })
   .use(OneDrive, { target: Dashboard, companionUrl: 'https://companion.uppy.io' });
 
-
+/*
 uppy.on("file-added", (file) => {
-  let dashboard = uppy.getPlugin('Dashboard');
-  let element_target = dashboard.el.parentElement
- console.log("dash -",element_target.getAttribute('data-collection'))
- console.log("name -",element_target.getAttribute('name'))
- const {collection,name} = crud.GetAttr(element_target)
- console.log("collection ",collection)
- console.log("name ",name)
+   console.log("file adde ",file.data)
+   console.log("........")
+     crud.createDocument({collection:'jean',
+       data: {
+				"nuevo": 1,
+				"nuevo2": 2,
+				"nuevo3": 3,
+			},
+     })
+  console.log("Guardo")
+  // Do something
+  var reader = new FileReader();
+  reader.readAsDataURL(file.data);
+  reader.onloadend = function () {
+    var base64data = reader.result;
+    console.log(base64data);
+  };
 });
-
+*/
 
 uppy.on("complete",async (result) => {
-  let dashboard = uppy.getPlugin('Dashboard');
-  let element_target = dashboard.el.parentElement
-  let collection = element_target.getAttribute('data-collection');
-  let name = element_target.getAttribute('name');
-  let data_array = []
-  console.log(name)
-  for (const index in result.successful) {
-    let file = result.successful[index];
-    let file_metadata = file.meta;
-    let file_data = file.data;
-    const resp2 = await readFile(file.data, 'readAsDataURL');
-    file_data = Object.assign({},file_metadata , {
-				"name": file_data.name,
-				"type": file_data.type,
-				"size": file_data.size,
-				"base64": resp2.result,
-			});
-			if(name == null)
-         crud.createDocument({
-           collection:collection,
-           data: file_data,
-         });
-      else
-        data_array.push(file_data);
-  }
-  
-  if(data_array.length){
-    console.log("saved many images on document with one name")
-    crud.createDocument({
-         collection:collection,
-         data: {'name':name,'images':data_array},
-       });
-  }else{
-    console.log("saved each document as image")
-  }
-  
-/*  console.log(
-    "Upload complete! We’ve uploaded these files:",
-    result.successful
-  );*/
-  alert("Saved")
-  uppy.reset()
+  //console.log("sssswsp --- ",result.successful)
+  //crud.createDocument({collection:'jean', uuid: "unique string"})
+  console.log("Guardo...")
+    for (const index in result.successful) {
+      let file = result.successful[index];
+      let file_data = file.data;
+      //console.log("file_data ",file_data)
+      console.log("Guardo...",file_data)
+      const resp2 = await readFile(file.data, 'readAsDataURL');
+       crud.createDocument({
+         collection:'jean',
+         data: {
+  				"name": file_data.name,
+  				"type": file_data.type,
+  				"size": file_data.size,
+  				"base64": resp2.result,
+  			},
+       })
+      //console.log("resp2",resp2.result)
+      
+    }
+      console.log(
+        "Upload complete! We’ve uploaded these files:",
+        result.successful
+      );
 });
-
-uppy.on('dashboard:modal-open', () => {
-  console.log('Modal is open')
-})
 
 const readFile = (file = {}, method = 'readAsText') => {
   const reader = new FileReader()
@@ -115,5 +104,3 @@ const readFile = (file = {}, method = 'readAsText') => {
     reader.onerror = (error) => reject(error)
   })
 }
-
-alert("----")
