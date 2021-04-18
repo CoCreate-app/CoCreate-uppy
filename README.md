@@ -9,7 +9,7 @@ A simple uppy component in vanilla javascript. Easily configured using HTML5 dat
 
 ![CoCreate-uppy](https://cdn.cocreate.app/docs/CoCreate-uppy.gif)
 
-## [Docs & Demo](https://cocreate.app/docs/clone)
+## [Docs & Demo](https://cocreate.app/docs/uppy)
 
 For a complete guide and working demo refer to the [doumentation](https://cocreate.app/docs/uppy)
 
