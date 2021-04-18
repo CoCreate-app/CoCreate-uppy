@@ -1,5 +1,5 @@
+# ignore
 node_modules
-.temp/
-*.zip
-docs/
-.DS_Store
+dist/*
+!dist/*.min.js
+.npmrc
