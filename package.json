@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.13.10",
+    "@cocreate/crud-client": "^1.0.3",
     "@cocreate/docs": "^1.0.3",
     "@uppy/core": "^1.16.2",
     "@uppy/dashboard": "^1.17.1",
