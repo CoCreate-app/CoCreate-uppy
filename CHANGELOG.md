@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.3...v1.0.4) (2021-04-19)
+
+
+### Bug Fixes
+
+* ci and build process ([330ea7e](https://github.com/CoCreate-app/CoCreate-uppy/commit/330ea7ed0446c6748b1c353baac8f72193382e98))
+* npm publish and cdn deployment ([a03fb44](https://github.com/CoCreate-app/CoCreate-uppy/commit/a03fb448223c6422148a948450d5a4032d71fac6))
+
 ## [1.0.3](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.2...v1.0.3) (2021-04-04)
 
 
