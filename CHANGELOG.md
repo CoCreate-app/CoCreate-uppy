@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.4...v1.0.5) (2021-04-23)
+
+
+### Bug Fixes
+
+* readme and documentation. Removed securitykeys ([fe49f9b](https://github.com/CoCreate-app/CoCreate-uppy/commit/fe49f9b6f74142f0901e19e5bc8f3d872e21d52a))
+
 ## [1.0.4](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.3...v1.0.4) (2021-04-19)
 
 
