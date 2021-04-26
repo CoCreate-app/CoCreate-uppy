@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.6...v1.0.7) (2021-04-26)
+
+
+### Bug Fixes
+
+* add missing imports and dependancies ([43f1762](https://github.com/CoCreate-app/CoCreate-uppy/commit/43f1762178cd4e2c595fc34fb7286012c5325206))
+
 ## [1.0.6](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.5...v1.0.6) (2021-04-26)
 
 
