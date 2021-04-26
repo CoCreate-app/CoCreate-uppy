@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.5...v1.0.6) (2021-04-26)
+
+
+### Bug Fixes
+
+* Html, css, js, json, xml will save as content ([e0ea499](https://github.com/CoCreate-app/CoCreate-uppy/commit/e0ea4992b6ae5bbe766329814685e00f055bf519))
+
 ## [1.0.5](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.4...v1.0.5) (2021-04-23)
 
 
