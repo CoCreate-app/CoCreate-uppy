@@ -67,13 +67,14 @@ uppy.on("complete",async (result) => {
     let file = result.successful[index];
     let file_metadata = file.meta;
     let file_data = file.data;
-    let method_parse = file_data.type.includes('image') ? 'readAsDataURL' : 'readAsText'
+    let method_parse = ( file_data.type.includes('image') || file_data.type.includes('audio') || file_data.type.includes('video') ) ? 'readAsDataURL' : 'readAsText'
     const resp2 = await readFile(file.data, method_parse);
+    console.log(file_data.type,"->",resp2.result)
     file_data = Object.assign({},file_metadata , {
 				"name": file_data.name,
 				"type": file_data.type,
 				"size": file_data.size,
-				"base64": resp2.result,
+				"content": resp2.result,
 			});
 			if(name == null)
          crud.createDocument({
@@ -85,10 +86,10 @@ uppy.on("complete",async (result) => {
   }
   
   if(data_array.length){
-    console.log("saved many images on document with one name")
+    console.log("saved many files on document with one name")
     crud.createDocument({
          collection:collection,
-         data: {'name':name,'images':data_array},
+         data: {'name':name,'files':data_array},
        });
   }else{
     console.log("saved each document as image")
