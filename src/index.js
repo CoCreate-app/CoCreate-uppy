@@ -67,7 +67,8 @@ uppy.on("complete",async (result) => {
     let file = result.successful[index];
     let file_metadata = file.meta;
     let file_data = file.data;
-    const resp2 = await readFile(file.data, 'readAsDataURL');
+    let method_parse = file_data.type.includes('image') ? 'readAsDataURL' : 'readAsText'
+    const resp2 = await readFile(file.data, method_parse);
     file_data = Object.assign({},file_metadata , {
 				"name": file_data.name,
 				"type": file_data.type,
@@ -92,6 +93,15 @@ uppy.on("complete",async (result) => {
   }else{
     console.log("saved each document as image")
   }
+/*  
+  for (const index in result.successful) {
+    let file = result.successful[index];
+  console.log(file)
+  console.log(file.type)
+  console.log(file.data)
+  const resp2 = await readFile(file.data, 'readAsText');
+  console.log("html ",resp2)
+  }*/
   
 /*  console.log(
     "Upload complete! We’ve uploaded these files:",
