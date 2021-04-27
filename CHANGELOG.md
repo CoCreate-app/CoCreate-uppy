@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.8...v1.0.9) (2021-04-27)
+
+
+### Bug Fixes
+
+* add host in docs ([2befd4e](https://github.com/CoCreate-app/CoCreate-uppy/commit/2befd4e0f082d7cc2e95ff0eee1be2e993d4698a))
+
 ## [1.0.8](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.7...v1.0.8) (2021-04-27)
 
 
