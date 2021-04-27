@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.7...v1.0.8) (2021-04-27)
+
+
+### Bug Fixes
+
+* Update to readme, demo, added cdn scripts ([91c732f](https://github.com/CoCreate-app/CoCreate-uppy/commit/91c732f1995c5be0eab3ebdf00a2a5950f30b785))
+
 ## [1.0.7](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.6...v1.0.7) (2021-04-26)
 
 
