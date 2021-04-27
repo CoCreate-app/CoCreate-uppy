@@ -84,15 +84,19 @@ uppy.on("complete",async (result) => {
       else
         data_array.push(file_data);
   }
-  
-  if(data_array.length){
+  if(data_array.length == 1){
+    console.log("saving one file")
+    crud.createDocument({
+         collection:collection,
+         data: {[name]:data_array[0]},
+       });
+  }
+  else if(data_array.length > 1){
     console.log("saved many files on document with one name")
     crud.createDocument({
          collection:collection,
-         data: {'name':name,'files':data_array},
+         data: {[name]:data_array},
        });
-  }else{
-    console.log("saved each document as image")
   }
 /*  
   for (const index in result.successful) {
@@ -126,5 +130,3 @@ const readFile = (file = {}, method = 'readAsText') => {
     reader.onerror = (error) => reject(error)
   })
 }
-
-alert("----")
