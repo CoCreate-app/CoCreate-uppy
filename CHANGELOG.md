@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.9...v1.0.10) (2021-05-08)
+
+
+### Bug Fixes
+
+* add css auto parse and save to docs. ([116d90a](https://github.com/CoCreate-app/CoCreate-uppy/commit/116d90a275af30b1b454dc65ed1484407a6a46e6))
+
 ## [1.0.9](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.8...v1.0.9) (2021-04-27)
 
 
