@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.10...v1.0.11) (2021-06-16)
+
+
+### Bug Fixes
+
+* added header for seo ([9738656](https://github.com/CoCreate-app/CoCreate-uppy/commit/9738656d8412e8bd342876bbaedb7680991226bc))
+
 ## [1.0.10](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.9...v1.0.10) (2021-05-08)
 
 
