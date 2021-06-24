@@ -20,9 +20,7 @@
     "html5-framework",
     "javascript-framework"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "publishConfig": { "access": "public" },
   "scripts": {
     "start": "npx webpack --config webpack.config.js",
     "build": "NODE_ENV=production npx webpack --config webpack.config.js",
@@ -35,9 +33,7 @@
   },
   "author": "CoCreate LLC",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-uppy/issues"
-  },
+  "bugs": { "url": "https://github.com/CoCreate-app/CoCreate-uppy/issues" },
   "homepage": "https://cocreate.app/docs/uppy",
   "funding": {
     "type": "GitHub Sponsors ❤",
@@ -63,8 +59,8 @@
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.13.10",
-    "@cocreate/crud-client": "^1.0.3",
-    "@cocreate/docs": "^1.0.3",
+    "@cocreate/crud-client": "latest",
+    "@cocreate/docs": "latest",
     "@uppy/core": "^1.16.2",
     "@uppy/dashboard": "^1.17.1",
     "@uppy/dropbox": "^1.4.25",
