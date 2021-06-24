@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.12...v1.0.13) (2021-06-24)
+
+
+### Bug Fixes
+
+* package versioningto 1.0.0 ([f0c57ab](https://github.com/CoCreate-app/CoCreate-uppy/commit/f0c57ab29a668d74e31ff42c5b53e263a91fd7d5))
+
 ## [1.0.12](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.11...v1.0.12) (2021-06-24)
 
 
