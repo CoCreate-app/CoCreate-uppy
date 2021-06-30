@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.15...v1.0.16) (2021-06-30)
+
+
+### Bug Fixes
+
+* Update readme.md ([19591e1](https://github.com/CoCreate-app/CoCreate-uppy/commit/19591e144aa14646e78308892971fe6407eeb7cf))
+
 ## [1.0.15](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.14...v1.0.15) (2021-06-30)
 
 
