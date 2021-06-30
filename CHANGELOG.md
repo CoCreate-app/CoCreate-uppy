@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.14...v1.0.15) (2021-06-30)
+
+
+### Bug Fixes
+
+* automated and manual workflows ([f477ea5](https://github.com/CoCreate-app/CoCreate-uppy/commit/f477ea5bb390879367637ef36af8054a7fe46f29))
+
 ## [1.0.14](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.13...v1.0.14) (2021-06-25)
 
 
