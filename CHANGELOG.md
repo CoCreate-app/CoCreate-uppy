@@ -1,3 +1,11 @@
+## [1.0.18](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.17...v1.0.18) (2021-07-13)
+
+
+### Bug Fixes
+
+* add yarn lockfile to git ignore ([14351db](https://github.com/CoCreate-app/CoCreate-uppy/commit/14351db577417dcc6379bb0a505e4ef820e275b2))
+* remove yarn.lock ([a67f4df](https://github.com/CoCreate-app/CoCreate-uppy/commit/a67f4df9f43d97b90d0fa55c71fe0a6bda156e9e))
+
 ## [1.0.17](https://github.com/CoCreate-app/CoCreate-uppy/compare/v1.0.16...v1.0.17) (2021-07-10)
 
 
